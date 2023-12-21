@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Codo a Codo</title>
 </head>
 
@@ -19,7 +19,7 @@
   <header class="color-header">
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="index.html">Conf Bs
+        <a class="navbar-brand text-white"><img src="img/codoacodo.png" alt="Codoacodo" height="90">Conf Bs
           As</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,47 +40,151 @@
               <a class="nav-link texto-header" href="#">Conviértete En Orador</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link texto-compra" href="#">Comprar Tickets</a>
+              <a class="nav-link texto-compra" href="FrontController?accion=registrar">Comprar Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link texto-warning" href="FrontController?accion=backoffice">Back Office</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <br>
-  <!--columnas-->
-  <div class="card-container">
-    <div class="card border-primary border mb-3" style="max-width: 18rem;">
-      <div class="card-body ">
-        <h5 class="card-title text-center">Estudiante</h5>
-        <p class="card-text">Tiene un descuento </p>
-        <p class="card-text text-center"><b>80%</b></p>
-        <p class="card-text text-secondary">* presentar documentación</p>
-      </div>
-    </div>
-    <div class="card border-primary border mb-3" style="max-width: 18rem;">
-      <div class="card-body ">
-        <h5 class="card-title text-center">Trainee</h5>
-        <p class="card-text">Tiene un descuento</p>
-        <p class="card-text text-center"><b>50%</b></p>
-        <p class="card-text text-secondary">* presentar documentación</p>
 
+  <!--Carrousel (Imagenes y texto)-->
+  <div id="carouselSlidesOnly" class="carousel slide position-relative d-flex align-items-center justify-content-end c"
+    data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/ba1.jpg" class="d-block w-100 opacidad" alt="Buenos Aires 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/ba2.jpg" class="d-block w-100 opacidad" alt="Buenos Aires 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/ba3.jpg" class="d-block w-100 opacidad" alt="Buenos Aires 3">
       </div>
     </div>
-    <div class="card border-warning border mb-3" style="max-width: 18rem;">
-      <div class="card-body ">
-        <h5 class="card-title text-center">Junior</h5>
-        <p class="card-text">Tiene un descuento</p>
-        <p class="card-text text-center"><b>15%</b></p>
-        <p class="card-text text-secondary">* presentar documentación</p>
+    <div class="position-absolute text-end col-md-6 col-12 text-light px-5">
+      <div class="d-none d-md-block pt-5 mt-5 ">
+        <h1>
+          Conf Bs As
+        </h1>
+        <p>
+          Bs As llega por primera vez a Argentina. Un evento para compartir con
+          nuestra comunidad el conocimiento y experiencia de los expertos que
+          están creando el futuro de Internet. Ven a conocer a miembros del
+          evento, a otros estudiantes de Codo a Codo y los oradores de primer
+          nivel que tenemos para ti. ¡Te esperamos!
+        </p>
+      </div>
+      <div class="d-none d-sm-block d-md-none text-center mt-5">
+        <h1>
+          Conf Bs As
+        </h1>
+        <p>
+          Por primera vez a Argentina. Veni a conocer los miembros del
+          evento, estudiantes y oradores de primer
+          nivel que tenemos para ti. ¡Te esperamos!
+        </p>
+      </div>
+      <div class="d-block d-sm-none text-center mb-0 pb-0 mt-5">
+        <p class="mb-0 pt-3">
+          Conoce los miembros del
+          evento. ¡Te esperamos!
+        </p>
+      </div>
+      <div class="pt-1 d-grid gap-2 d-md-block">
+        <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+        <button type="button" class="btn colorverde text-light btn btn-success">Comprar tickets</button>
       </div>
     </div>
   </div>
+
+  <br>
+  <!-- oradores -->
+  <div class=" mb-3 container col-6">
+    <h5 class="text-center ">Conoce a Los </h5>
+    <h2 class="text-center"><b>Oradores</b></h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="img/steve.jpg" class="rounded-top-2" height="415px" alt="steve jobs">
+          <div class="card-body">
+            <span class="badge text-bg-warning">JavaScript</span>
+            <span class="badge text-bg-info">React</span>
+            <h3>Steve Jobs</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora consequatur
+              repellendus deserunt totam, unde in dolor voluptate quo accusamus quod, sed esse quia rerum nihil nam
+              asperiores, debitis laudantium.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="img/bill.jpg" class="rounded-top-2" height="415px" alt="bill gates">
+          <div class="card-body">
+            <span class="badge text-bg-warning">JavaScript</span>
+            <span class="badge text-bg-info">React</span>
+            <h3>Bill Gates</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora consequatur
+              repellendus deserunt totam, unde in dolor voluptate quo accusamus quod, sed esse quia rerum nihil nam
+              asperiores, debitis laudantium.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="img/ada.jpeg" class="rounded-top-2" height="415px" alt="ada lovelace">
+          <div class="card-body">
+            <span class="badge text-bg-secondary">Negocios</span>
+            <span class="badge text-bg-danger">Startups</span>
+            <h3>Ada Lovelace</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora consequatur
+              repellendus deserunt totam, unde in dolor voluptate quo accusamus quod, sed esse quia rerum nihil nam
+              asperiores, debitis laudantium.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <br>
+  <!-- foto playa con texto-->
+  <div class="container-fluid">
+    <div class="card mb-3 bg-custom">
+      <div class="row">
+        <div class="col-6">
+          <img src="img/honolulu.jpg" class="img-fluid rounded-start" alt="Isla">
+        </div>
+        <div class="col-6">
+          <div class=" card-body bg-custom text-white">
+            <h5 class="card-title">Bs As - Octubre</h5>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum quas
+              adipisci iste soluta. Facilis ab expedita architecto perferendis placeat exercitationem ducimus mollitia
+              distinctio commodi cumque unde, fugiat, rerum ea sed eos consectetur! Magni quas ratione deleniti magnam
+              repudiandae ducimus consectetur expedita atque quisquam excepturi voluptatibus quibusdam sunt dolorem
+              incidunt sint itaque porro, cumque at ut! Iste sapiente quae ipsum enim pariatur recusandae minus eligendi
+              voluptas culpa officia quibusdam hic doloremque magni, sint saepe soluta praesentium placeat autem odio
+              officiis veniam voluptate! Illo dolores dolor officiis aperiam, maxime, sed, eos eum nobis culpa corporis
+              magnam ea quaerat pariatur quam quae.</p>
+            <button type="button" class="btn btn-outline-light">Conoce Mas</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
   <!--formulario-->
   <div class="mb-3 container col-6">
-    <h6 class="text-center">VENTA</h6>
-    <h2 class="text-center">VALOR DEL TICKET $200</h2>
-    <form onsubmit="enviarFormulario(event)" class="row">
+    <h6 class="text-center">Convíertete en un </h6>
+    <h2 class="text-center"><b>Orador</b></h2>
+    <p class="text-center">anotáte como Orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</p>
+    <form class="row">
       <div class="col-md-6">
         <label class="form-label"></label>
         <input type="text" class="form-control" placeholder="Nombre">
@@ -91,30 +195,11 @@
       </div>
       <div class="col-md-12">
         <label class="form-label"></label>
-        <input type="email" class="form-control" placeholder="Correo">
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Cantidad</label>
-        <div class="form-label">
-          <input type="text" class="form-control" placeholder="Cantidad" id="cantidadTickets">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Categoria</label>
-        <select class="form-select" id="select-categoria">
-          <option value="1">Estudiante</option>
-          <option value="2">Trainee</option>
-          <option value="3">Junior</option>
-
-        </select>
+        <textarea class="form-control" placeholder="Sobre qué quieres hablar?" rows="3"></textarea>
+        <p>Recuerda incluir un título para tu charla</p>
       </div>
       <div class="col-12">
-        <div class="alert alert-primary" role="alert">Total a Pagar: $<span id="totalAPagar">0</span></div>
-      </div>
-      <div class="d-md-flex justify-content-md-between">
-        <button class="btn btn-secondary button-enviar col-sm-5" id="borrarBtn">Borrar</button>
-        <button type="submit" id="resumenBtn" class="btn btn-secondary button-enviar col-sm-5"
-          onclick="calcularTotal()">Resumen</button>
+        <button type="submit" class="btn btn-secondary col-12 button-enviar">Enviar</button>
       </div>
     </form>
   </div>
@@ -146,7 +231,6 @@
             <li class="nav-item">
               <a class="nav-link texto-header" href="#">Estudiantes</a>
             </li>
-
           </ul>
         </div>
 
@@ -157,7 +241,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-  <script src="Js/index.js"></script>
 </body>
 
 </html>

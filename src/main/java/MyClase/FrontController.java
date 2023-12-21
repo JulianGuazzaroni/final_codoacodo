@@ -13,11 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/FrontController")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String Interger = null;
        
     
     public FrontController() {
         super();
-        System.out.println("constructor");
+    
         
     }
 
@@ -25,7 +26,6 @@ public class FrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		String accion=null;
-		System.out.println("doGet");
 		ticketDAO ticketDAO=null;
 		
 		try 
@@ -49,8 +49,33 @@ public class FrontController extends HttpServlet {
 		{
 			dispatcher = request.getRequestDispatcher("vistas/ComprarTickets.jsp");
 		}
-		dispatcher = request.getRequestDispatcher("vistas/ComprarTickets.jsp");
+		else if (accion.equals("insert")) 
+			
+		{
+			String nombre=request.getParameter("nombre");
+			String apellido=request.getParameter("apellido");
+			String mail=request.getParameter("mail");
+			int cant=Integer.parseInt(request.getParameter("cant"));
+			int categoria=Integer.parseInt(request.getParameter("categoria"));
+			
+			//categoria
+			ticket ticket=new ticket(0, nombre, apellido, mail, cant, categoria, 200);
+			ticketDAO.insertarTicket(ticket);
+			dispatcher = request.getRequestDispatcher("vistas/conferencia.jsp");
+		}
+		else if (accion.equals("BackOffice")) 
+			
+		{
+			dispatcher = request.getRequestDispatcher("vistas/BackOffice.jsp");
+		}
+		else if (accion.equals("Volver")) 
+			
+		{
+			dispatcher = request.getRequestDispatcher("vistas/conferencia.jsp");
+		}
+		
 		dispatcher.forward(request, response);
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
